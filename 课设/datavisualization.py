@@ -7,7 +7,7 @@ import pandas as pd
 def show():
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 设置字体
     # 数据读取
-    data = pd.read_excel('D:/Code/Py_projects/PythonWork/腾讯课堂课程数据.xlsx').values.tolist()
+    data = pd.read_excel('./腾讯课堂课程数据.xlsx').values.tolist()
     x0 = len(data)
     # print(*data, sep='\n')
     # 数据分类

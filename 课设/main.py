@@ -167,11 +167,11 @@ if __name__ == '__main__':
     # html = askURL(Url)
     """ 因为js异步渲染的关系, 无法爬取到完整源码, 
         所以没有使用askURL函数来获取， 只能直接复制网页源码存放到txkt.html文件中"""
-    with open('D:/Code/Py_projects/PythonWork/txkt.html', 'r', encoding='utf-8') as f:
+    with open('./txkt.html', 'r', encoding='utf-8') as f:
         html = f.read()
     da = getDate(html)
     # print(*da, sep='\n')
-    savaData(da, "D:/Code/Py_projects/PythonWork/腾讯课堂课程数据.xlsx")
+    savaData(da, "./腾讯课堂课程数据.xlsx")
     da.sort(key=lambda x: x[-1], reverse=True)
     print('爬取成功!\n启动用户界面', end='')
     interface(text="在线课程评价与推荐系统")
